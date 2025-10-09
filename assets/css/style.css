@@ -1,0 +1,233 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+    background-color: #f8fff9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ======== HEADER ======== */
+.topbar {
+    background: linear-gradient(90deg, #2e7d32, #66bb6a);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.topbar h5 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.topbar .user-info {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+    width: 230px;
+    background: #ffffff;
+    padding-top: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #e8f5e9;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 2px;
+}
+
+.sidebar .nav-link {
+    color: #2e7d32;
+    font-weight: 500;
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 4px 10px;
+}
+
+.sidebar .nav-link i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.sidebar .nav-link:hover {
+    background: #e8f5e9;
+    color: #1b5e20;
+    transform: translateX(4px);
+}
+
+/* Estado activo */
+
+.sidebar .nav-link.active {
+    background: linear-gradient(90deg, #388e3c, #66bb6a);
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: inset 3px 0 0 #2e7d32; /* barra lateral verde oscuro */
+    transform: translateX(2px);
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link.active i {
+    color: #ffffff;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+.main-content {
+    margin-left: 230px;
+    padding-top: 80px;
+    width: 100%;
+    min-height: 100vh;
+    background: #f8fff9;
+    transition: margin-left 0.3s ease;
+}
+
+/* ======== TARJETAS DE BOTONES ======== */
+.card-btn {
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #e8f5e9;
+    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-btn:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(180deg, #e8f5e9, #ffffff);
+    box-shadow: 0 6px 15px rgba(67, 160, 71, 0.2);
+}
+
+.card-btn .icono {
+    font-size: 2.5rem;
+    color: #43a047;
+    transition: color 0.3s ease;
+}
+
+.card-btn:hover .icono {
+    color: #1b5e20;
+}
+
+.card-btn h6 {
+    font-weight: 600;
+    color: #1b5e20;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+/* ======== FOOTER ======== */
+.footer {
+    background: linear-gradient(90deg, #2e7d32, #59be5e);
+    position: fixed;
+    bottom: 0;
+    left: 230px;
+    right: 0;
+    height: 45px;
+    color: white;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 20px;
+    }
+
+    .footer {
+        left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-btn {
+        height: 110px;
+    }
+
+    .card-btn .icono {
+        font-size: 2rem;
+    }
+
+    .card-btn h6 {
+        font-size: 0.9rem;
+    }
+}
+/* --- Estilos para la página de artículos --- */
+.main-content {
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+    border: none;
+    transition: all 0.2s;
+}
+
+.nav-tabs .nav-link.active {
+    color: #15c52f;
+    border-bottom: 3px solid #1cc140;
+    background: none;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #35bb26;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    font-size: 1rem;
+    color: #212529;
+    background-color: #f1f3f5 !important;
+}
+
+.card-body {
+    background-color: #fff;
+}
