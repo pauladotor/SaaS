@@ -27,12 +27,12 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <!-- NAV TABS -->
     <ul class="nav nav-tabs mb-4" id="personalTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active text-success fw-semibold" id="tab-personal" data-bs-toggle="tab" data-bs-target="#contenidoPersonal" type="button" role="tab" aria-controls="contenidoPersonal" aria-selected="true">
+        <button class="nav-link active fw-semibold" id="tab-personal" data-bs-toggle="tab" data-bs-target="#contenidoPersonal" type="button" role="tab" aria-controls="contenidoPersonal" aria-selected="true">
           <i class="bi bi-person-fill me-1"></i> Personal
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link text-success fw-semibold" id="tab-grupal" data-bs-toggle="tab" data-bs-target="#contenidoGrupal" type="button" role="tab" aria-controls="contenidoGrupal" aria-selected="false">
+        <button class="nav-link fw-semibold" id="tab-grupal" data-bs-toggle="tab" data-bs-target="#contenidoGrupal" type="button" role="tab" aria-controls="contenidoGrupal" aria-selected="false">
           <i class="bi bi-people-fill me-1"></i> Personal Grupal
         </button>
       </li>
