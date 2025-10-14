@@ -14,4 +14,4 @@
         <div class="user-info text-white">
             <i class="bi bi-person-circle me-2"></i> Usuario
         </div>
-    </header>
+    </header><br><br><br>
