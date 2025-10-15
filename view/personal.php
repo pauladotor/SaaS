@@ -53,7 +53,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </button>
         </div>
 
-        <div class="table-responsive shadow-sm rounded bg-white">
+        <div class=" shadow-sm rounded bg-white">
           <table class="table table-hover align-middle mb-0 text-center">
             <thead class="table-success">
               <tr>
