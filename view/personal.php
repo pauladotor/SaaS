@@ -145,7 +145,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">
-        <form action="../controller/guardar_personal.php" method="POST">
+        <form action="../controllers/guardar_personal.php" method="POST">
           <div class="row g-3">
             <div class="col-md-6">
               <label>Nombre:</label>
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var estadoActual = badge.textContent.trim().toLowerCase();
         var nuevoEstado = (estadoActual === "activo") ? "desactivo" : "activo";
 
-        fetch("../controller/actualizar_estado.php", {
+        fetch("../controllers/actualizar_estado_personal.php", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: "id=" + id + "&estado=" + nuevoEstado
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var id = document.getElementById("editar_id").value;
     var estado = document.getElementById("editar_estado").value;
     
-    fetch("../controller/actualizar_estado.php", {
+    fetch("../controllers/actualizar_estado_personal.php", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: "id=" + id + "&estado=" + estado
