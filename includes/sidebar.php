@@ -2,10 +2,10 @@
 $menu = [
     ['nombre' => 'Página principal', 'icono' => 'bi-house-door', 'link' => '../view/PaginaPrincipal.php'],
     ['nombre' => 'Articulos', 'icono' => 'bi-box', 'link' => '../view/articulos.php'],
-    ['nombre' => 'Cartera', 'icono' => 'bi-wallet2', 'link' => '../view/cartera.php'],
+    /* ['nombre' => 'Cartera', 'icono' => 'bi-wallet2', 'link' => '../view/cartera.php'], */
     ['nombre' => 'Clientes', 'icono' => 'bi-people', 'link' => '../view/clientes.php'],
     ['nombre' => 'Compras', 'icono' => 'bi-cart-check', 'link' => '../view/compras.php'],
-    ['nombre' => 'Consumos', 'icono' => 'bi-graph-up', 'link' => '../view/consumos.php'],
+    /* ['nombre' => 'Consumos', 'icono' => 'bi-graph-up', 'link' => '../view/consumos.php'], */
     ['nombre' => 'Nomina', 'icono' => 'bi-person-lines-fill', 'link' => '../view/nomina.php'],
     ['nombre' => 'Personal', 'icono' => 'bi-person-workspace', 'link' => '../view/personal.php'],
     ['nombre' => 'Produccion', 'icono' => 'bi-gear', 'link' => '../view/produccion.php'],
@@ -20,10 +20,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
 $colorSeccion = [
     'PaginaPrincipal.php' => 'linear-gradient(90deg, #2e7d32, #66bb6a)',
     'articulos.php'        => 'linear-gradient(90deg, #1b9a2eff, #6abc47ff)',
-    'cartera.php'          => 'linear-gradient(90deg, #00ef34ff, #189849ff)',
+    /* 'cartera.php'          => 'linear-gradient(90deg, #00ef34ff, #189849ff)', */
     'clientes.php'         => 'linear-gradient(90deg, #31c015ff, #42f596ff)',
     'compras.php'          => 'linear-gradient(90deg, #2e7d32, #81c784)',
-    'consumos.php'         => 'linear-gradient(90deg, #25f930ff, #73bd42ff)',
+    /* 'consumos.php'         => 'linear-gradient(90deg, #25f930ff, #73bd42ff)', */
     'nomina.php'           => 'linear-gradient(90deg, #77c628ff, #50ef60ff)',
     'personal.php'         => 'linear-gradient(90deg, #526d41ff, #5cc83eff)',
     'produccion.php'       => 'linear-gradient(90deg, #71a957ff, #5cc078ff)',
