@@ -13,22 +13,20 @@ $menu = [
     ['nombre' => 'Ventas', 'icono' => 'bi-cash-stack', 'link' => '../view/ventas.php']
 ];
 
-// Detectar la página actual
 $current_page = basename($_SERVER['PHP_SELF']);
 
-// Colores por sección (puedes personalizarlos)
 $colorSeccion = [
-    'PaginaPrincipal.php' => 'linear-gradient(90deg, #2e7d32, #66bb6a)',
-    'articulos.php'        => 'linear-gradient(90deg, #1b9a2eff, #6abc47ff)',
+    'PaginaPrincipal.php' => 'linear-gradient(90deg, #396ac0ff, #66b2bbff)',
+    'articulos.php'        => 'linear-gradient(90deg, #1b4a9aff, #476ebcff)',
     /* 'cartera.php'          => 'linear-gradient(90deg, #00ef34ff, #189849ff)', */
-    'clientes.php'         => 'linear-gradient(90deg, #31c015ff, #42f596ff)',
-    'compras.php'          => 'linear-gradient(90deg, #2e7d32, #81c784)',
+    'clientes.php'         => 'linear-gradient(90deg, #15a9c0ff, #427bf5ff)',
+    'compras.php'          => 'linear-gradient(90deg, #2e367dff, #8188c7ff)',
     /* 'consumos.php'         => 'linear-gradient(90deg, #25f930ff, #73bd42ff)', */
-    'nomina.php'           => 'linear-gradient(90deg, #77c628ff, #50ef60ff)',
-    'personal.php'         => 'linear-gradient(90deg, #526d41ff, #5cc83eff)',
-    'produccion.php'       => 'linear-gradient(90deg, #71a957ff, #5cc078ff)',
-    'proveedores.php'      => 'linear-gradient(90deg, #006913ff, #26a64aff)',
-    'ventas.php'           => 'linear-gradient(90deg, #2e7d32, #81c784)'
+    'nomina.php'           => 'linear-gradient(90deg, #2865c6ff, #50c2efff)',
+    'personal.php'         => 'linear-gradient(90deg, #41536dff, #3e6ac8ff)',
+    'produccion.php'       => 'linear-gradient(90deg, #575da9ff, #5c91c0ff)',
+    'proveedores.php'      => 'linear-gradient(90deg, #003369ff, #2675a6ff)',
+    'ventas.php'           => 'linear-gradient(90deg, #2e577dff, #819ec7ff)'
 ];
 ?>
 

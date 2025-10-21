@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $stmt = $pdo->prepare("UPDATE tb_proveedores SET estado = :estado WHERE id = :id");
             $stmt->execute(['estado' => $estado, 'id' => $id]);
-            echo json_encode(['success' => true]);
+            echo json_encode(['primary' => true]);
         } catch (PDOException $e) {
             echo json_encode(['success' => false, 'message' => $e->getMessage()]);
         }

@@ -5,7 +5,7 @@ include_once '../includes/sidebar.php';
 
 <div class="main-content">
     <div class="container py-5">
-        <h2 class="text-center mb-4 text-success fw-bold">Panel Principal</h2>
+        <h2 class="text-center mb-4 text-primary fw-bold">Panel Principal</h2>
         <div class="row g-4 justify-content-center">
             <?php
             $secciones = [

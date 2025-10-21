@@ -9,7 +9,7 @@ include_once '../includes/sidebar.php';
 
         <!-- Mensajes -->
         <?php if(isset($_GET['msg']) && $_GET['msg'] == 'success'): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 Cliente agregado correctamente.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
@@ -24,9 +24,9 @@ include_once '../includes/sidebar.php';
         <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
             <form method="GET" class="input-group w-auto mb-2">
                 <input type="text" name="buscar" id="busqueda" class="form-control" placeholder="Buscar por Razón Social o NIT" value="<?= isset($_GET['buscar']) ? htmlspecialchars($_GET['buscar']) : '' ?>">
-                <button class="btn btn-outline-success" type="submit" id="btnBuscar"><i class="bi bi-search"></i></button>
+                <button class="btn btn-outline-primary" type="submit" id="btnBuscar"><i class="bi bi-search"></i></button>
             </form>
-            <button class="btn btn-success d-flex align-items-center mb-2" data-bs-toggle="modal" data-bs-target="#modalAgregar">
+            <button class="btn btn-primary d-flex align-items-center mb-2" data-bs-toggle="modal" data-bs-target="#modalAgregar">
                 <i class="bi bi-plus-lg me-2"></i> Añadir Cliente
             </button>
         </div>
@@ -34,7 +34,7 @@ include_once '../includes/sidebar.php';
         <!-- Tabla simplificada -->
         <div class="shadow-sm rounded bg-white">
             <table class="table table-hover align-middle mb-0 text-center">
-                <thead class="table-success">
+                <thead class="table-primary">
                     <tr>
                         <th>Razón Social</th>
                         <th>NIT</th>
@@ -56,7 +56,7 @@ include_once '../includes/sidebar.php';
 
                     if (count($clientes) > 0) {
                         foreach ($clientes as $c) {
-                            $estadoClass = ($c['estado'] === 'Activo') ? 'bg-success' : 'bg-secondary';
+                            $estadoClass = ($c['estado'] === 'Activo') ? 'bg-primary' : 'bg-secondary';
                             echo '<tr data-id="' . $c['id'] . '">';
                             echo '<td>' . htmlspecialchars($c['razon_social']) . '</td>';
                             echo '<td>' . htmlspecialchars($c['nit']) . '</td>';
@@ -65,10 +65,10 @@ include_once '../includes/sidebar.php';
                             echo '<td>' . htmlspecialchars($c['telefono']) . '</td>';
                             echo '<td><span class="badge ' . $estadoClass . ' estado-badge">' . $c['estado'] . '</span></td>';
                             echo '<td>
-                                    <button class="btn btn-sm btn-outline-success editar-estado me-1" data-id="' . $c['id'] . '" data-estado="' . $c['estado'] . '" data-bs-toggle="modal" data-bs-target="#modalEditarEstado">
+                                    <button class="btn btn-sm btn-outline-primary editar-estado me-1" data-id="' . $c['id'] . '" data-estado="' . $c['estado'] . '" data-bs-toggle="modal" data-bs-target="#modalEditarEstado">
                                         <i class="bi bi-pencil"></i>
                                     </button>
-                                    <button class="btn btn-sm btn-outline-success ver-cliente" 
+                                    <button class="btn btn-sm btn-outline-primary ver-cliente" 
                                         data-bs-toggle="modal" data-bs-target="#modalVerCliente"
                                         data-razon="' . htmlspecialchars($c['razon_social']) . '"
                                         data-nit="' . htmlspecialchars($c['nit']) . '"
@@ -101,7 +101,7 @@ include_once '../includes/sidebar.php';
 <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregarLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalAgregarLabel">Añadir Cliente</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
@@ -160,7 +160,7 @@ include_once '../includes/sidebar.php';
             </div>
           </div>
           <div class="mt-4 text-end">
-            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </form>
@@ -173,7 +173,7 @@ include_once '../includes/sidebar.php';
 <div class="modal fade" id="modalEditarEstado" tabindex="-1" aria-labelledby="modalEditarEstadoLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalEditarEstadoLabel">Editar Estado del Cliente</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
@@ -188,7 +188,7 @@ include_once '../includes/sidebar.php';
             </select>
           </div>
           <div class="text-end">
-            <button type="button" class="btn btn-success" id="guardarEstadoCliente">Guardar Cambios</button>
+            <button type="button" class="btn btn-primary" id="guardarEstadoCliente">Guardar Cambios</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </form>
@@ -201,7 +201,7 @@ include_once '../includes/sidebar.php';
 <div class="modal fade" id="modalVerCliente" tabindex="-1" aria-labelledby="modalVerClienteLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalVerClienteLabel">Detalles del Cliente</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
