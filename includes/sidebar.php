@@ -16,7 +16,7 @@ $menu = [
 $current_page = basename($_SERVER['PHP_SELF']);
 
 $colorSeccion = [
-    'PaginaPrincipal.php' => 'linear-gradient(90deg, #396ac0ff, #66b2bbff)',
+    'PaginaPrincipal.php' => 'linear-gradient(90deg, #396ac0ff, #5da3e0ff)',
     'articulos.php'        => 'linear-gradient(90deg, #1b4a9aff, #476ebcff)',
     /* 'cartera.php'          => 'linear-gradient(90deg, #00ef34ff, #189849ff)', */
     'clientes.php'         => 'linear-gradient(90deg, #15a9c0ff, #427bf5ff)',

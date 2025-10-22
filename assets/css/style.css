@@ -118,7 +118,7 @@ body {
     background: white;
     border-radius: 18px;
     border: 1px solid #e8f5e9;
-    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.1);
+    box-shadow: 0 4px 10px rgba(68, 137, 222, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
@@ -130,8 +130,8 @@ body {
 
 .card-btn:hover {
     transform: translateY(-5px);
-    background: linear-gradient(180deg, #e8f5e9, #ffffff);
-    box-shadow: 0 6px 15px rgba(67, 160, 71, 0.2);
+    background: linear-gradient(180deg, #84b9da, #ffffff);
+    box-shadow: 0 6px 15px rgba(53, 151, 208, 0.2);
 }
 
 .card-btn .icono {
@@ -143,6 +143,7 @@ body {
 .card-btn:hover .icono {
     color: #307eb5;
 }
+
 
 .card-btn h6 {
     font-weight: 600;
