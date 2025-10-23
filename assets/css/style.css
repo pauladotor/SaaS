@@ -10,7 +10,7 @@ body {
 
 /* ======== HEADER ======== */
 .topbar {
-    background: linear-gradient(90deg, #2e7d32, #66bb6a);
+    background: linear-gradient(90deg, #3d6bb0, #4380d5);
     height: 60px;
     position: fixed;
     top: 0;
@@ -61,7 +61,7 @@ body {
 }
 
 .sidebar .nav-link {
-    color: #2e7d32;
+    color: #3884cc;
     font-weight: 500;
     padding: 12px 18px;
     border-radius: 10px;
@@ -79,7 +79,7 @@ body {
 
 .sidebar .nav-link:hover {
     background: #e8f5e9;
-    color: #1b5e20;
+    color: #418cca;
     transform: translateX(4px);
 }
 
@@ -91,10 +91,10 @@ body {
 /* Estado activo */
 
 .sidebar .nav-link.active {
-    background: linear-gradient(90deg, #388e3c, #66bb6a);
+    background: linear-gradient(90deg, #38648e, #5590d8);
     color: #ffffff !important;
     font-weight: 600;
-    box-shadow: inset 3px 0 0 #2e7d32; /* barra lateral verde oscuro */
+    box-shadow: inset 3px 0 0 #3166a7; 
     transform: translateX(2px);
     transition: all 0.3s ease;
 }
@@ -118,7 +118,7 @@ body {
     background: white;
     border-radius: 18px;
     border: 1px solid #e8f5e9;
-    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.1);
+    box-shadow: 0 4px 10px rgba(68, 137, 222, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
@@ -130,30 +130,31 @@ body {
 
 .card-btn:hover {
     transform: translateY(-5px);
-    background: linear-gradient(180deg, #e8f5e9, #ffffff);
-    box-shadow: 0 6px 15px rgba(67, 160, 71, 0.2);
+    background: linear-gradient(180deg, #84b9da, #ffffff);
+    box-shadow: 0 6px 15px rgba(53, 151, 208, 0.2);
 }
 
 .card-btn .icono {
     font-size: 2.5rem;
-    color: #43a047;
+    color: #4c84d3;
     transition: color 0.3s ease;
 }
 
 .card-btn:hover .icono {
-    color: #1b5e20;
+    color: #307eb5;
 }
+
 
 .card-btn h6 {
     font-weight: 600;
-    color: #1b5e20;
+    color: #2856aa;
     margin-top: 8px;
     font-size: 1rem;
 }
 
 /* ======== FOOTER ======== */
 .footer {
-    background: linear-gradient(90deg, #2e7d32, #59be5e);
+    background: linear-gradient(90deg, #4065c3, #5d91d8);
     position: fixed;
     bottom: 0;
     left: 230px;
@@ -214,13 +215,13 @@ body {
 }
 
 .nav-tabs .nav-link.active {
-    color: #15c52f;
-    border-bottom: 3px solid #1cc140;
+    color: #1556c5;
+    border-bottom: 3px solid #1c5ec1;
     background: none;
 }
 
 .nav-tabs .nav-link:hover {
-    color: #35bb26;
+    color: #2691bb;
 }
 
 .card {

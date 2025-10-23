@@ -46,16 +46,16 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
           <div class="input-group w-auto">
             <input type="text" id="busqueda" class="form-control" placeholder="Buscar por cédula o nombre">
-            <button id="btnBuscar" class="btn btn-outline-success"><i class="bi bi-search"></i></button>
+            <button id="btnBuscar" class="btn btn-outline-primary"><i class="bi bi-search"></i></button>
           </div>
-          <button class="btn btn-success d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modalAgregar">
+          <button class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modalAgregar">
             <i class="bi bi-person-plus me-2"></i> Añadir Personal
           </button>
         </div>
 
         <div class=" shadow-sm rounded bg-white">
           <table class="table table-hover align-middle mb-0 text-center">
-            <thead class="table-success">
+            <thead class="table-primary">
               <tr>
                 <th>Nombre</th>
                 <th>Cédula</th>
@@ -81,7 +81,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
                       $tipo_nomina = isset($p['tipo_nomina']) ? htmlspecialchars(ucfirst($p['tipo_nomina'])) : 'N/A';
                       $estado = isset($p['estado']) ? $p['estado'] : 'activo';
                       $estadoTexto = ucfirst($estado);
-                      $estadoClass = ($estado == 'activo') ? 'bg-success' : 'bg-secondary';
+                      $estadoClass = ($estado == 'activo') ? 'bg-primary' : 'bg-secondary';
                       $fecha_inc = isset($p['fecha_incorporacion']) ? htmlspecialchars($p['fecha_incorporacion']) : 'N/A';
                       $fecha_nac = isset($p['fecha_nacimiento']) ? htmlspecialchars($p['fecha_nacimiento']) : 'N/A';
                       $genero = isset($p['genero']) ? htmlspecialchars($p['genero']) : 'N/A';
@@ -99,7 +99,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
                       echo '<td>' . $fecha_nac . '</td>';
                       echo '<td>' . $genero . '</td>';
                       echo '<td>';
-                      echo '<button class="btn btn-sm btn-outline-success editar-btn me-1" ';
+                      echo '<button class="btn btn-sm btn-outline-primary editar-btn me-1" ';
                       echo 'data-id="' . $id . '" ';
                       echo 'data-estado="' . $estado . '" ';
                       echo 'data-bs-toggle="modal" ';
@@ -125,7 +125,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <!-- TAB PERSONAL GRUPAL -->
       <div class="tab-pane fade" id="contenidoGrupal" role="tabpanel" aria-labelledby="tab-grupal">
         <div class="card shadow-sm p-4 bg-white">
-          <h5 class="text-success fw-bold mb-3"><i class="bi bi-people-fill me-2"></i>Listado de Personal Grupal</h5>
+          <h5 class="text-primary fw-bold mb-3"><i class="bi bi-people-fill me-2"></i>Listado de Personal Grupal</h5>
           
 
         </div>
@@ -140,7 +140,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregarLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalAgregarLabel">Añadir Personal</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
@@ -195,7 +195,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
           </div>
           <div class="mt-4 text-end">
-            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </form>
@@ -208,7 +208,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalEditarLabel">Editar Estado del Personal</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
@@ -223,7 +223,7 @@ $personal = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </select>
           </div>
           <div class="text-end">
-            <button type="button" class="btn btn-success" id="guardarEstado">Guardar Cambios</button>
+            <button type="button" class="btn btn-primary" id="guardarEstado">Guardar Cambios</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </form>
@@ -270,9 +270,9 @@ document.addEventListener("DOMContentLoaded", function() {
             badge.textContent = nuevoEstado.charAt(0).toUpperCase() + nuevoEstado.slice(1);
             if (nuevoEstado === "activo") {
               badge.classList.remove("bg-secondary");
-              badge.classList.add("bg-success");
+              badge.classList.add("bg-primary");
             } else {
-              badge.classList.remove("bg-success");
+              badge.classList.remove("bg-primary");
               badge.classList.add("bg-secondary");
             }
           } else {

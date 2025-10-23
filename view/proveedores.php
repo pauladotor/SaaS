@@ -8,8 +8,8 @@ include_once '../includes/sidebar.php';
         <h2 class="fw-bold text-dark mb-4">Gestión de Proveedores</h2>
 
         <!-- Mensajes -->
-        <?php if(isset($_GET['msg']) && $_GET['msg'] == 'success'): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?php if(isset($_GET['msg']) && $_GET['msg'] == 'primary'): ?>
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
                 Proveedor agregado correctamente.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
@@ -24,9 +24,9 @@ include_once '../includes/sidebar.php';
         <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
             <form method="GET" class="input-group w-auto mb-2">
                 <input type="text" name="buscar" class="form-control" placeholder="Buscar por nombre o documento" value="<?= isset($_GET['buscar']) ? htmlspecialchars($_GET['buscar']) : '' ?>">
-                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
             </form>
-            <button class="btn btn-success d-flex align-items-center mb-2" data-bs-toggle="modal" data-bs-target="#modalAgregar">
+            <button class="btn btn-primary d-flex align-items-center mb-2" data-bs-toggle="modal" data-bs-target="#modalAgregar">
                 <i class="bi bi-plus-lg me-2"></i> Añadir Proveedor
             </button>
         </div>
@@ -34,7 +34,7 @@ include_once '../includes/sidebar.php';
         <!-- Tabla -->
         <div class="shadow-sm rounded bg-white">
             <table class="table table-hover align-middle mb-0 text-center">
-                <thead class="table-success">
+                <thead class="table-primary">
                     <tr>
                         <th>Nombre</th>
                         <th>Tipo Documento</th>
@@ -56,7 +56,7 @@ include_once '../includes/sidebar.php';
 
                     if(count($proveedores) > 0){
                         foreach($proveedores as $p){
-                            $estadoClass = ($p['estado'] === 'Activo') ? 'bg-success' : 'bg-secondary';
+                            $estadoClass = ($p['estado'] === 'Activo') ? 'bg-primary' : 'bg-secondary';
                             echo '<tr data-id="'.$p['id'].'">';
                             echo '<td>'.htmlspecialchars($p['nombre']).'</td>';
                             echo '<td>'.$p['tipo_documento'].'</td>';
@@ -65,10 +65,10 @@ include_once '../includes/sidebar.php';
                             echo '<td>'.htmlspecialchars($p['email']).'</td>';
                             echo '<td><span class="badge '.$estadoClass.'">'.$p['estado'].'</span></td>';
                             echo '<td>
-                                    <button class="btn btn-sm btn-outline-success editar-estado me-1" data-id="'.$p['id'].'" data-estado="'.$p['estado'].'" data-bs-toggle="modal" data-bs-target="#modalEditarEstado">
+                                    <button class="btn btn-sm btn-outline-primary editar-estado me-1" data-id="'.$p['id'].'" data-estado="'.$p['estado'].'" data-bs-toggle="modal" data-bs-target="#modalEditarEstado">
                                         <i class="bi bi-pencil"></i>
                                     </button>
-                                    <button class="btn btn-sm btn-outline-success ver-proveedor" 
+                                    <button class="btn btn-sm btn-outline-primary ver-proveedor" 
                                         data-bs-toggle="modal" data-bs-target="#modalVerProveedor"
                                         data-nombre="'.htmlspecialchars($p['nombre']).'"
                                         data-tipo="'.$p['tipo_documento'].'"
@@ -99,7 +99,7 @@ include_once '../includes/sidebar.php';
 <div class="modal fade" id="modalAgregar" tabindex="-1" aria-labelledby="modalAgregarLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="modalAgregarLabel">Añadir Proveedor</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
@@ -151,7 +151,7 @@ include_once '../includes/sidebar.php';
             </div>
           </div>
           <div class="mt-4 text-end">
-            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </form>
@@ -164,7 +164,7 @@ include_once '../includes/sidebar.php';
 <div class="modal fade" id="modalEditarEstado" tabindex="-1" aria-labelledby="modalEditarEstadoLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Editar Estado del Proveedor</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
@@ -178,7 +178,7 @@ include_once '../includes/sidebar.php';
             </select>
         </div>
         <div class="text-end">
-            <button type="button" class="btn btn-success" id="guardarEstadoProveedor">Guardar Cambios</button>
+            <button type="button" class="btn btn-primary" id="guardarEstadoProveedor">Guardar Cambios</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -190,7 +190,7 @@ include_once '../includes/sidebar.php';
 <div class="modal fade" id="modalVerProveedor" tabindex="-1" aria-labelledby="modalVerProveedorLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title">Detalles del Proveedor</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
