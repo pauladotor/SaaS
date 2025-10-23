@@ -20,11 +20,7 @@ include_once '../includes/sidebar.php';
                     <i class="bi bi-file-earmark-text"></i> Ficha Técnica
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="materia-tab" data-bs-toggle="tab" href="#materia" role="tab">
-                    <i class="bi bi-box-seam"></i> Materia Prima
-                </a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" id="procesos-tab" data-bs-toggle="tab" href="#procesos" role="tab">
                     <i class="bi bi-gear"></i> Procesos y Operaciones

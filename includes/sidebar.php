@@ -5,11 +5,11 @@ $menu = [
     /* ['nombre' => 'Cartera', 'icono' => 'bi-wallet2', 'link' => '../view/cartera.php'], */
     ['nombre' => 'Clientes', 'icono' => 'bi-people', 'link' => '../view/clientes.php'],
     ['nombre' => 'Compras', 'icono' => 'bi-cart-check', 'link' => '../view/compras.php'],
-    /* ['nombre' => 'Consumos', 'icono' => 'bi-graph-up', 'link' => '../view/consumos.php'], */
+     ['nombre' => 'Materiales', 'icono' => 'bi-graph-up', 'link' => '../view/materiales.php'], 
     /* ['nombre' => 'Nomina', 'icono' => 'bi-person-lines-fill', 'link' => '../view/nomina.php'], */
     ['nombre' => 'Personal', 'icono' => 'bi-person-workspace', 'link' => '../view/personal.php'],
     ['nombre' => 'Produccion', 'icono' => 'bi-gear', 'link' => '../view/produccion.php'],
-    ['nombre' => 'Proveedores', 'icono' => 'bi-truck', 'link' => '../view/proveedores.php'],
+    ['nombre' => 'Proveedores', 'icono' => 'bi-truck', 'link' => '../view/proveedores.php']
     /* ['nombre' => 'Ventas', 'icono' => 'bi-cash-stack', 'link' => '../view/ventas.php'] */
 ];
 
@@ -21,7 +21,7 @@ $colorSeccion = [
     /* 'cartera.php'          => 'linear-gradient(90deg, #00ef34ff, #189849ff)', */
     'clientes.php'         => 'linear-gradient(90deg, #15a9c0ff, #427bf5ff)',
     'compras.php'          => 'linear-gradient(90deg, #2e367dff, #8188c7ff)',
-    /* 'consumos.php'         => 'linear-gradient(90deg, #25f930ff, #73bd42ff)', */
+    'materiales.php'         => 'linear-gradient(90deg, #2581f9ff, #42a8bdff)', 
     /* 'nomina.php'           => 'linear-gradient(90deg, #2865c6ff, #50c2efff)', */
     'personal.php'         => 'linear-gradient(90deg, #41536dff, #3e6ac8ff)',
     'produccion.php'       => 'linear-gradient(90deg, #575da9ff, #5c91c0ff)',

@@ -22,7 +22,7 @@ include_once '../includes/sidebar.php';
                 /* ['nombre' => 'Cartera', 'icono' => 'bi-wallet2', 'link' => '../view/cartera.php'], */
                 ['nombre' => 'Clientes', 'icono' => 'bi-people', 'link' => '../view/clientes.php'],
                 ['nombre' => 'Compras', 'icono' => 'bi-cart-check', 'link' => '../view/compras.php'],
-                /* ['nombre' => 'Consumos', 'icono' => 'bi-graph-up', 'link' => '../view/consumos.php'], */
+                ['nombre' => 'Materiales', 'icono' => 'bi-graph-up', 'link' => '../view/materiales.php'], 
                 ['nombre' => 'Nomina', 'icono' => 'bi-person-lines-fill', 'link' => '../view/nomina.php'],
                 ['nombre' => 'Personal', 'icono' => 'bi-person-workspace', 'link' => '../view/personal.php'],
                 ['nombre' => 'Produccion', 'icono' => 'bi-gear', 'link' => '../view/produccion.php'],
